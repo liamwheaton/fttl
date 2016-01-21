@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-controller="mainCtrl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ siteTitle }}</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:500,700|Lobster|Oswald:700,400' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="assets/dist/style.min.css">
+</head>
+<body>
+	
+	<header>
+		<div>		
+			<a href="#">
+				<span class="fly">FLY</span>
+				<span class="tothe">TO THE</span>
+				<span class="limit">LIMIT</span>
+			</a>
+			<div>
+				<img src="assets/img/logomark.png">
+				<img src="assets/img/purelogomark.png">
+			</div>					
+		</div>
+		<h1 class="byline">Acrobatics, Charter, Adventure</h1>
+	</header>
+
+	<nav>
+		
+		<ul>
+			<li><a href="#">Hangar</a></li>
+			<li><a href="#">Crew</a></li>
+			<li><a href="#">Flights</a></li>
+			<li><a href="#">Aircraft</a></li>
+			<li><a href="#">Safety</a></li>
+			<li><a href="#">Bookings</a></li>
+		</ul>
+
+	</nav>
+	
+	<div ng-view></div>
+
+	<footer>
+		<div>
+			<a href="">75 Gorge Road, Queenstown</a>
+			<a href="">16 lloyd Dunn Ave, Wanaka</a>
+		</div>
+		<div><p>+64 9 443 112</p></div>
+		<div><a href="">info@flytothelimit.co.nz</a></div>
+	</footer>
+	
+	<script src="assets/dist/libs.min.js"></script>
+	<script src="assets/dist/app.min.js"></script>
+	
+</body>
+</html>

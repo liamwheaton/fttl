@@ -1,0 +1,81 @@
+@import 'variables.styl'
+
+// General
+
+*
+	box-sizing border-box
+	text-decoration none
+	
+body 
+	font-family body-font
+	margin 0
+	background-image: url('../img/retro_blue.png');
+	
+p, li
+	line-height 1.5
+
+// Header
+header
+	display flex
+	flex-direction column
+	div
+		display flex
+		margin 0 auto
+		a
+			display flex
+			flex-direction column
+			font-family logo-font
+			color fttl-red
+			font-weight 700
+			margin 0.5em 1em
+			.fly
+				font-size 6.8em
+				// font-size 8.5em
+				margin 0
+				line-height 1
+			.tothe
+				font-size 3.1em
+				// font-size 3.9em
+				margin 0
+				line-height 1
+			.limit
+				font-size 4em
+				// font-size 5em
+				margin 0 
+				line-height 1
+		div
+			display flex
+			flex-direction column
+			img
+				margin 0.5em 1em
+				max-width 100px
+				max-height 100px
+	.byline
+		// display none
+		margin 0 auto 1em auto
+		font-size 1.4em
+		font-family logo-font
+		color fttl-white
+
+//Nav
+
+ul
+	list-style none
+	padding 0
+	margin 0 1em
+	li
+		margin-bottom 0.5em
+		a
+			padding-top 0.6em
+			text-align center
+			display block
+			max-width 270px
+			margin 0 auto
+			height 45px
+			background fttl-red
+			color fttl-white
+			font-weight 700
+
+// Views
+
+// Footer
