@@ -59,23 +59,118 @@ header
 
 //Nav
 
-ul
-	list-style none
-	padding 0
-	margin 0 1em
-	li
-		margin-bottom 0.5em
-		a
-			padding-top 0.6em
-			text-align center
+nav
+	margin 0
+	.toggle
+		padding-top 0.6em
+		text-align center
+		display block
+		max-width 270px
+		margin 0 auto 0.5em auto
+		height 45px
+		background fttl-red
+		color fttl-white
+		font-weight 700
+	.menu
+		margin 0
+	[id^=drop]
+		display none
+	[id^=drop]:checked
+		& + .toggle
+			background fttl-white
+		& + ul
 			display block
-			max-width 270px
-			margin 0 auto
-			height 45px
-			background fttl-red
-			color fttl-white
-			font-weight 700
+	.toggle + a,
+		.menu
+			display none
+			list-style none
+			padding 0
+			li
+				margin-bottom 0.5em
+				a
+					padding-top 0.6em
+					text-align center
+					display block
+					max-width 270px
+					margin 0 auto
+					height 45px
+					background fttl-red
+					color fttl-white
+					font-weight 700
+				ul
+					display none
+					list-style none
+					padding 0
+					li
+						a
+							max-width 250px
+
+		
+			
+				
+	// [id^=drop]:checked
+	// 	& + ul
+	// 		display block
+		
+
+// ul
+// 	list-style none
+// 	padding 0
+// 	margin 0 1em
+// 	li
+// 		margin-bottom 0.5em
+// 		a
+// 			padding-top 0.6em
+// 			text-align center
+// 			display block
+// 			max-width 270px
+// 			margin 0 auto
+// 			height 45px
+// 			background fttl-red
+// 			color fttl-white
+// 			font-weight 700
 
 // Views
 
+// SM Icons
+.social-media
+	display flex
+	justify-content space-between
+	max-width 270px
+	margin 1em auto
+	color fttl-red
+	font-size 2.5em
+
 // Footer
+footer
+	color fttl-red
+	font-weight 500
+	max-width 270px
+	margin 0 auto 1em auto
+	a
+		color inherit
+	i
+		margin-right 16px
+	address
+		display flex
+		margin-bottom 0.5em
+		.fa-map-marker
+			font-size 2.7em
+			margin-left 0.07em
+			padding-top 0.1em
+		.map-links
+			display flex
+			flex-direction column
+	div
+		display flex
+		margin-bottom 0.5em
+		.fa-phone
+			font-size 2.7em
+		.fa-envelope
+			font-size 2em
+		p
+			margin 0
+			padding-top 0.5em
+		a
+			padding-top 0.2em
+			

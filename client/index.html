@@ -26,11 +26,21 @@
 	</header>
 
 	<nav>
-		
-		<ul>
+		<label for="drop" class="toggle">Menu</label>
+		<input type="checkbox" id="drop">
+		<ul class="menu">
 			<li><a href="#">Hangar</a></li>
 			<li><a href="#">Crew</a></li>
-			<li><a href="#">Flights</a></li>
+			<li>
+				<label for="drop-2" class="toggle">Flights</label>
+				<input type="checkbox" id="drop-2">
+				<ul>
+					<li><a href="#">Scenic Flights</a></li>
+					<li><a href="#">Stunt Flights</a></li>
+					<li><a href="#">Photography</a></li>
+					<li><a href="#">Charter Flights</a></li>
+				</ul>
+			</li>
 			<li><a href="#">Aircraft</a></li>
 			<li><a href="#">Safety</a></li>
 			<li><a href="#">Bookings</a></li>
@@ -39,14 +49,30 @@
 	</nav>
 	
 	<div ng-view></div>
+	
+	<div class="social-media">
+		<i class="fa fa-facebook-square"></i>
+		<i class="fa fa-instagram"></i>
+		<i class="fa fa-twitter"></i>
+		<i class="fa fa-youtube-square"></i>
+	</div>
 
 	<footer>
+		<address>
+			<i class="fa fa-map-marker"></i>
+			<div class="map-links">
+				<a href="">75 Gorge Road, Queenstown</a>
+				<a href="">16 lloyd Dunn Ave, Wanaka</a>
+			</div>
+		</address>
 		<div>
-			<a href="">75 Gorge Road, Queenstown</a>
-			<a href="">16 lloyd Dunn Ave, Wanaka</a>
+			<i class="fa fa-phone"></i>
+			<p>+64 9 443 112</p>
 		</div>
-		<div><p>+64 9 443 112</p></div>
-		<div><a href="">info@flytothelimit.co.nz</a></div>
+		<div>
+			<i class="fa fa-envelope"></i>
+			<a href="">info@flytothelimit.co.nz</a>
+		</div>
 	</footer>
 	
 	<script src="assets/dist/libs.min.js"></script>
