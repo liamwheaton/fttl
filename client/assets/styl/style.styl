@@ -65,6 +65,7 @@ nav
 		padding-top 0.6em
 		text-align center
 		display block
+		position relative
 		max-width 270px
 		margin 0 auto 0.5em auto
 		height 45px
@@ -76,8 +77,6 @@ nav
 	[id^=drop]
 		display none
 	[id^=drop]:checked
-		& + .toggle
-			background fttl-white
 		& + ul
 			display block
 	.toggle + a,
@@ -105,32 +104,50 @@ nav
 						a
 							max-width 250px
 
-		
-			
-				
-	// [id^=drop]:checked
-	// 	& + ul
-	// 		display block
-		
-
-// ul
-// 	list-style none
-// 	padding 0
-// 	margin 0 1em
-// 	li
-// 		margin-bottom 0.5em
-// 		a
-// 			padding-top 0.6em
-// 			text-align center
-// 			display block
-// 			max-width 270px
-// 			margin 0 auto
-// 			height 45px
-// 			background fttl-red
-// 			color fttl-white
-// 			font-weight 700
-
 // Views
+.main-title
+	font-family heading-font
+	color fttl-red
+	font-size 2.1em
+	-ms-transform rotate(-4deg) 
+	-webkit-transform rotate(-4deg) 
+	transform rotate(-4deg)
+	text-shadow: 0px 0px fttl-white, 0px 0px fttl-white, 1px 0px fttl-white, 0px 1px fttl-white, 2px 1px fttl-white, 1px 2px fttl-white
+.page-content
+	max-width 270px
+	margin 0 auto
+	color fttl-red
+	//Hangar
+	.link
+		padding-top 0.6em
+		text-align center
+		display block
+		position relative
+		max-width 270px
+		margin 0 auto 0.5em auto
+		height 45px
+		background fttl-red
+		color fttl-white
+		font-weight 700
+	//Crew	
+	.shadow
+		box-shadow: 0px 0px fttl-white, 0px 0px fttl-white, 1px 0px fttl-white, 0px 1px fttl-white, 2px 1px fttl-white, 1px 2px fttl-white
+		.slide-title
+			background-color fttl-white
+			color fttl-red
+			padding 1em
+			margin 0
+			// font-family heading-font
+			font-weight 700
+	//Safety
+	.safety-link
+		img
+			margin-bottom 1em	
+
+		
+
+	
+
 
 // SM Icons
 .social-media
