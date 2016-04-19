@@ -1,6 +1,11 @@
 angular.module('app.controllers')
 
 .controller('mainCtrl', function($scope) {
+
+	$(".link").click(function(){
+		$("#drop").prop("checked", false);
+	});
+
 	$scope.siteTitle = 'Fly to the Limit';
 
 	$(document).ready(function(){
