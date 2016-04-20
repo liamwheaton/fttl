@@ -59,52 +59,13 @@ header
 
 //Nav
 
-nav
-	margin 0
-	.toggle
-		padding-top 0.6em
-		text-align center
-		display block
-		position relative
-		max-width 270px
-		margin 0 auto 0.5em auto
-		height 45px
-		background fttl-red
-		color fttl-white
-		font-weight 700
-	.menu
-		margin 0
-	[id^=drop]
-		display none
-	[id^=drop]:checked
-		& + ul
-			display block
-	.toggle + a,
-		.menu
-			display none
-			list-style none
-			padding 0
-			transition 0.3s ease-in-out
-			
-			li
-				margin-bottom 0.5em
-				a
-					padding-top 0.6em
-					text-align center
-					display block
-					max-width 270px
-					margin 0 auto
-					height 45px
-					background fttl-red
-					color fttl-white
-					font-weight 700
-				ul
-					display none
-					list-style none
-					padding 0
-					li
-						a
-							max-width 250px
+.animate-show
+	opacity 1
+.animate-show.ng-hide-add, .animate-show.ng-hide-remove
+	transition all linear 0.5s
+.animate-show.ng-hide
+	opacity 0
+
 
 // Views
 .main-title
