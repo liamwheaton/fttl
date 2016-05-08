@@ -14,6 +14,11 @@ angular.module('app.routes')
 				templateUrl: 'views/crew.html'
 			})
 
+			.when('/flights', {
+				controller: 'mainCtrl',
+				templateUrl: 'views/flights.html'
+			})
+
 			.when('/scenicf', {
 				controller: 'mainCtrl',
 				templateUrl: 'views/scenicf.html'
@@ -42,6 +47,11 @@ angular.module('app.routes')
 			.when('/safety', {
 				controller: 'mainCtrl',
 				templateUrl: 'views/safety.html'
+			})
+
+			.when('/contact', {
+				controller: 'mainCtrl',
+				templateUrl: 'views/contact.html'
 			})
 
 			.otherwise({
