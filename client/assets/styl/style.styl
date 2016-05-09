@@ -1,6 +1,10 @@
 @import 'variables.styl'
 
 // General
+[ng\\:cloak], [ng-cloak], .ng-cloak, .ng-hide 
+  display none !important
+
+
 *
 	box-sizing border-box
 	text-decoration none
@@ -10,6 +14,15 @@ body
 	background fttl-texture	
 p, li
 	line-height 1.5
+.bounce-up
+	opacity 0
+	transition all 250ms ease-out
+	transform translate3d(0px, 200px, 0px)
+	transform translate(0px, 200px)
+	backface-visibility hidden
+.bounce-up.in-view
+	opacity 1
+	transform translate3d(0px, 0px, 0px)
 // Header
 header
 	display flex
@@ -59,10 +72,10 @@ nav
 	.toggle
 		display block
 		max-width 100%
-		height 61px
+		height 45px
 		background fttl-red
 		color fttl-white
-		border-bottom 16px solid darken(fttl-red, 20%)
+		border-bottom 1px solid darken(fttl-red, 20%)
 		span
 			display block
 			width 270px
@@ -83,7 +96,6 @@ nav
 			max-width 100%
 			background fttl-red
 			height 45px
-			padding 8px 0 0 16px
 			border-bottom 1px solid darken(fttl-red, 20%)
 			.link, label
 				display block
@@ -91,9 +103,19 @@ nav
 				color fttl-white
 				font-weight 700
 				font-size 1.2em
+				span
+					display block
+					width 270px
+					margin 0 auto
+					padding-top 8px
+					font-weight 700
+					font-size 1em
 			input
 				display none
-					
+.bottom-border
+	height 16px
+	max-width 100%
+	background-color darken(fttl-red, 20%) 					
 				
 // Views
 .main-title
@@ -103,16 +125,15 @@ nav
 	-ms-transform rotate(-4deg) 
 	-webkit-transform rotate(-4deg) 
 	transform rotate(-4deg)
-	text-shadow: 0px 0px darken(fttl-red, 20%), 0px 0px darken(fttl-red, 20%), 1px 0px darken(fttl-red, 20%), 0px 1px darken(fttl-red, 20%)
 .page-content	
 	margin 0 auto
 	color fttl-red
 	//Hangar
 	section
-		max-width 320px
+		max-width 100%
 		padding 20px
 		background fttl-white
-		margin-bottom 0.5em
+		margin 0em auto 0.5em auto
 		box-shadow fttl-card
 		p
 			color fttl-black
@@ -131,7 +152,12 @@ nav
 			font-weight 700
 		//Crew	
 		.shadow
-			box-shadow: 0px 0px fttl-white, 0px 0px fttl-white, 1px 0px fttl-white, 0px 1px fttl-white, 2px 1px fttl-white, 1px 2px fttl-white
+			box-shadow: 0px 0px fttl-white, 
+						0px 0px fttl-white, 
+						1px 0px fttl-white, 
+						0px 1px fttl-white, 
+						2px 1px fttl-white, 
+						1px 2px fttl-white
 			.slide-title
 				background-color fttl-white
 				color fttl-red
@@ -143,16 +169,7 @@ nav
 			img
 				margin-bottom 1em	
 // SM Icons
-.social-media
-	display flex
-	justify-content space-around
-	max-width 100%
-	height 61px
-	padding-top 8px
-	color fttl-white
-	background fttl-red
-	font-size 2em
-	border-top 16px solid darken(fttl-red, 20%)
+
 
 // Footer
 footer
@@ -161,5 +178,18 @@ footer
 	font-weight 700
 	font-size 0.65em
 	max-width 100%
-	padding 1.5em 0 1.5em 2.5em
+	.social-media
+		display flex
+		justify-content space-around
+		max-width 100%
+		margin 0
+		height 61px
+		padding-top 0.2em
+		color fttl-white
+		background fttl-red
+		font-size 3em
+		border-top 16px solid darken(fttl-red, 20%)
+	p
+		margin 0
+		padding 1em
 			
