@@ -14,6 +14,7 @@ angular.module('app', [
 	'ngResource',
 	'ngMessages',
 	'ngSanitize',
+	'uiGmapgoogle-maps',
 
 	'app.controllers',
 	'app.directives',

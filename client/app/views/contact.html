@@ -2,35 +2,99 @@
 
 <div class="page-content">
 
-	<section class="animation-element bounce-up">
+	<section>
 		<h2 class="main-title">Contact Us</h2>
 	</section>
 
 	<section class="animation-element bounce-up">
-		<h3>Give us a bell</h3>
-		<div>
-			<i class="fa fa-phone"></i>
-			<p>+64 9 443 112</p>
+
+		
+		<h3>Our locations</h3>
+		<ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+		<div class="map-links">
+			<a class="button" href="">75 Gorge Road, Queenstown</a class="button" href="">
+			<a class="button" href="">16 lloyd Dunn Ave, Wanaka</a class="button" href="">
 		</div>
+	
+
 	</section>
 
 	<section class="animation-element bounce-up">
-		<h3>You've got mail</h3>
-		<div>
-			<i class="fa fa-envelope"></i>
-			<a href="">info@flytothelimit.co.nz</a>
-		</div>
-	</section>
-
-	<section class="animation-element bounce-up">
-		<h3>Our location</h3>
-		<address>
-			<i class="fa fa-map-marker"></i>
-			<div class="map-links">
-				<a href="">75 Gorge Road, Queenstown</a>
-				<a href="">16 lloyd Dunn Ave, Wanaka</a>
+		
+		<a href="" class="contact-link">
+			
+			<h3>Book now!</h3>
+			<div class="circle">
+				<i class="fa fa-book" aria-hidden="true"></i>
 			</div>
-		</address>
+
+		</a>
+
+		<form action="">
+
+			<div class="form-row">
+				<label for="type"><i class="fa fa-plane" aria-hidden="true"></i></label>
+				<select name="type" id="">
+					<option value="scenic">Scenic</option>
+					<option value="stunt">Stunt</option>
+					<option value="photography">Photography</option>
+					<option value="charter">Charter</option>
+				</select>
+			</div>
+
+			<div class="form-row">
+				<label for="date"><i class="fa fa-calendar" aria-hidden="true"></i></label>
+				<input type="date" name="date" required>
+			</div>
+
+			<div class="form-row">
+				<label for="phone"><i class="fa fa-phone"></i></label>
+				<input type="tel" pattern='[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}' name="phone" title='Phone Number (Format: +99(99)9999-9999)' placeholder="Phone" required>
+			</div>
+
+			<div class="form-row">
+				<label for="email"><i class="fa fa-envelope"></i></label>
+				<input type="text" name="email" placeholder="Email" required>
+			</div>
+
+			<div class="form-row">
+				<label for="name"><i class="fa fa-user" aria-hidden="true"></i></label>
+				<input type="text" name="name" placeholder="Name" required>
+			</div>
+
+			<div class="form-row">
+				<textarea name="message" placeholder="Additional comments..." cols="30" rows="10"></textarea>
+			</div>
+
+			<a class="button" href="#">Confirm</a>
+
+		</form>
+
+	</section>
+
+	<section class="animation-element bounce-up">
+
+		<a class="contact-link" href="tel:+649443112">
+			<h3>Give us a bell</h3>
+			<div class="circle">
+				<i class="fa fa-phone"></i>
+			</div>
+			<p>+64 9 443 112</p>
+		</a>
+
+	</section>
+
+	<section class="animation-element bounce-up">
+
+		<a class="contact-link" href="">
+			<h3>You've got mail</h3>
+			<div class="circle">
+				<i class="fa fa-envelope"></i>
+				
+			</div>
+			<p>info@flytothelimit.co.nz</p>
+		</a>
+
 	</section>
 
 </div>

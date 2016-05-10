@@ -37,7 +37,7 @@ var paths = {
 		'bower_components/angular-animate/angular-animate.min.js',
 		'bower_components/lodash/lodash.min.js',
 		'bower_components/angular-simple-logger/dist/angular-simple-logger.min.js',
-		'bower_components/ngGeolocation/ngGeolocation.min.js',
+		'bower_components/angular-google-maps/dist/angular-google-maps.min.js',
 		'bower_components/angular-cookies/angular-cookies.min.js',
 		'bower_components/angular-messages/angular-messages.min.js'
 		

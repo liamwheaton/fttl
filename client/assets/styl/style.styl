@@ -30,7 +30,7 @@ header
 	background darken(fttl-blue, 10%)
 	div
 		display flex
-		margin 0 auto
+		padding 10px
 		a
 			display flex
 			flex-direction column
@@ -53,18 +53,17 @@ header
 		div
 			display flex
 			flex-direction column
+			padding 0
 			img
 				margin 0.5em 1em
 				max-width 100px
 				max-height 100px
 	.byline
-		margin 0 auto 1em auto
+		margin 0 0 1em 1.1em
 		font-size 1.4em
 		font-family logo-font
 		color fttl-white
 //Nav
-.animate-show.ng-hide-add, .animate-show.ng-hide-remove
-	transition all linear 0.5s
 nav
 	margin 0
 	#drop
@@ -79,14 +78,9 @@ nav
 		span
 			display block
 			width 270px
-			margin 0 auto
-			padding-top 12px
+			padding 0.6em 0 0 1.1em
 			font-weight 700
 			font-size 1.4em
-	.animate-show
-		opacity 1
-	.animate-show.ng-hide
-		opacity 0
 	.menu
 		list-style none
 		padding 0
@@ -106,8 +100,7 @@ nav
 				span
 					display block
 					width 270px
-					margin 0 auto
-					padding-top 8px
+					padding 0.6em 0 0 1.1em
 					font-weight 700
 					font-size 1em
 			input
@@ -131,7 +124,7 @@ nav
 	//Hangar
 	section
 		max-width 100%
-		padding 20px
+		padding 10px 20px
 		background fttl-white
 		margin 0em auto 0.5em auto
 		box-shadow fttl-card
@@ -168,9 +161,83 @@ nav
 		.safety-link
 			img
 				margin-bottom 1em	
-// SM Icons
-
-
+		//Contact
+		.angular-google-map-container
+				height 250px
+				width 100%
+				margin-bottom 10px
+		.contact-link
+			font-weight 700
+			font-size 0.9em
+			color fttl-red
+			display flex
+			flex-direction column
+			align-items center
+			p
+				color fttl-red
+				margin 0 0 10px 0
+			.circle
+				width 80px
+				height 80px
+				border 4px fttl-red solid
+				border-radius 40px
+				padding 20px
+				margin 0 auto 1em auto 
+				.fa-phone
+					font-size 2.5em
+				.fa-envelope
+					font-size 2em
+				.fa-map-marker
+					font-size 2.5em
+					margin-left 5px
+				.fa-book
+					font-size 2.5em
+		
+		.map-links
+			display flex
+			flex-direction column
+			width 270px
+			margin-right 0
+			.button
+				padding-top 0.6em
+				text-align center
+				display block
+				width 270px
+				margin 0 auto 0.5em auto
+				height 45px
+				background fttl-red
+				color fttl-white
+				font-weight 700
+		form
+			margin 0 auto
+			width 270px
+			.form-row
+				margin-bottom 10px	
+				label
+					display inline-block
+					width 45px
+					height 45px
+					background-color fttl-red
+					color fttl-white
+					padding 1em
+				input, select
+					border solid 1px fttl-red
+					width 225px
+					height 45px
+					margin-left -5px
+					padding-left 10px
+				textarea
+					width 270px
+			.button
+				padding-top 0.6em
+				text-align center
+				display block
+				max-width 270px
+				margin 0 auto 0.5em auto
+				height 45px
+				background fttl-red
+				color fttl-white
+				font-weight 700
 // Footer
 footer
 	color fttl-white
