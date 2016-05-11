@@ -3,7 +3,45 @@ angular.module('app.controllers')
 .controller('mainCtrl', function($scope) {
 
 	$scope.siteTitle = 'Fly to the Limit';
-	$scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
+	$scope.map = { 
+		center: { 
+			latitude: -45.0228425, 
+			longitude: 168.6603457 
+		}, 
+		zoom: 14 
+	};
+
+	$scope.markers = [{
+			id: 1,
+			latitude: -45.0228425, 
+			longitude: 168.6603457
+		},
+		{
+			id: 2,
+			latitude: -44.7228807,
+			longitude: 169.2435987
+
+	}];
+
+	$scope.queenstown = function() {
+		$scope.map = { 
+			center: { 
+				latitude: -45.0228425, 
+				longitude: 168.6603457 
+			}, 
+			zoom: 14 
+		};
+	}
+
+	$scope.wanaka = function() {
+		$scope.map = { 
+			center: { 
+				latitude: -44.7228807,
+				longitude: 169.2435987 
+			}, 
+			zoom: 14 
+		};
+	}
 
 	$(document).ready(function() {
 		$(".owl-carousel").owlCarousel({

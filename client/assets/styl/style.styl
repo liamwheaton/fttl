@@ -14,6 +14,8 @@ body
 	background fttl-texture	
 p, li
 	line-height 1.5
+:focus
+	outline none
 .bounce-up
 	opacity 0
 	transition all 250ms ease-out
@@ -197,7 +199,7 @@ nav
 			display flex
 			flex-direction column
 			width 270px
-			margin-right 0
+			margin 0 0 0 0
 			.button
 				padding-top 0.6em
 				text-align center
@@ -212,14 +214,16 @@ nav
 			margin 0 auto
 			width 270px
 			.form-row
-				margin-bottom 10px	
+				margin-bottom 10px
 				label
 					display inline-block
+					text-align center
+					vertical-align middle
 					width 45px
 					height 45px
 					background-color fttl-red
 					color fttl-white
-					padding 1em
+					padding-top 13px
 				input, select
 					border solid 1px fttl-red
 					width 225px
