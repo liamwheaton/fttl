@@ -43,13 +43,6 @@ angular.module('app.controllers')
 		};
 	}
 
-	$(document).ready(function() {
-		$(".owl-carousel").owlCarousel({
-			items: 1,
-			singleItem: true
-		}); 
-	});
-
 	var $animation_elements = $('.animation-element');
 	var $window = $(window);
 
