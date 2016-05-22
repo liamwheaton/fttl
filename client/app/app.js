@@ -15,6 +15,7 @@ angular.module('app', [
 	'ngMessages',
 	'ngSanitize',
 	'uiGmapgoogle-maps',
+	'angular-carousel',
 
 	'app.controllers',
 	'app.directives',

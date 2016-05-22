@@ -3,6 +3,14 @@ angular.module('app.controllers')
 .controller('mainCtrl', function($scope) {
 
 	$scope.siteTitle = 'Fly to the Limit';
+
+	$scope.images = [];
+
+	$scope.images = [
+		'../../assets/img/scenicflight.png',
+		'../../assets/img/charterflight.png'
+	];
+
 	$scope.map = { 
 		center: { 
 			latitude: -45.0228425, 
@@ -51,6 +59,7 @@ angular.module('app.controllers')
 		var window_top_position = $window.scrollTop();
 		var window_bottom_position = (window_top_position + window_height + 150);
 
+
 		$.each($animation_elements, function() {
 			var $element = $(this);
 			var element_height = $element.outerHeight();
@@ -63,10 +72,24 @@ angular.module('app.controllers')
 			} else {
 				$element.removeClass('in-view');
 			}
+
 		});
+
+		if (window_top_position > 300) {
+			$('.btt').fadeIn('slow');
+		} else {
+			$('.btt').fadeOut('slow');
+		}
 	}
 
 	$window.on('scroll resize', check_if_in_view);
 	$window.trigger('scroll');
+
+	$('.btt').click(function() {
+		$('html, body').animate({
+			scrollTop: 0
+		}, 700);
+		return false;
+	});
 
 });

@@ -57,7 +57,7 @@ header
 			flex-direction column
 			padding 0
 			img
-				margin 0.5em 1em
+				margin 0.5em 0 0.5em 1em
 				max-width 100px
 				max-height 100px
 	.byline
@@ -230,6 +230,20 @@ nav
 				background fttl-red
 				color fttl-white
 				font-weight 700
+	//Flights
+	.item
+		padding 0
+		margin 0
+		position relative
+		
+		h3
+			color fttl-white
+			position absolute
+			padding 30px 0 0 25px
+		img
+			max-width 100%
+			margin-bottom 3px
+			
 	//Crew
 	.gallery
 		padding 0
@@ -243,6 +257,13 @@ nav
 		p
 			margin 0
 			padding 10px 20px
+	//Info pages
+	.carousel
+		height 270px
+		width 100%
+		li
+			img
+				max-width 100%
 // Footer
 footer
 	color fttl-white
@@ -263,5 +284,18 @@ footer
 		border-top 16px solid darken(fttl-red, 20%)
 	p
 		margin 0
-		padding 1em
+		padding 1.5em 1em 1em 1em
+		height 45px
+.btt
+	width 45px
+	height 45px
+	padding-top 13px
+	background rgba(153, 26, 62, 0.3)
+	color fttl-white
+	z-index 999
+	position fixed
+	right 0px
+	bottom 0px
+	text-align center
+		
 			
