@@ -1,9 +1,8 @@
 @import 'variables.styl'
 
 // General
-[ng\\:cloak], [ng-cloak], .ng-cloak, .ng-hide 
-  display none !important
-
+// [ng\\:cloak], [ng-cloak], .ng-cloak, .ng-hide 
+//   display none !important
 
 *
 	box-sizing border-box
@@ -25,14 +24,22 @@ p, li
 .bounce-up.in-view
 	opacity 1
 	transform translate3d(0px, 0px, 0px)
+
 // Header
 header
 	display flex
 	flex-direction column
 	background darken(fttl-blue, 10%)
+	@media (min-width: 800px)
+		background none
+	
 	div
 		display flex
 		padding 10px
+		@media (min-width 450px)
+			margin 0 auto
+		@media (min-width 600px)
+			margin 0 auto
 		a
 			display flex
 			flex-direction column
@@ -40,34 +47,62 @@ header
 			color fttl-red
 			font-weight 700
 			margin 0.5em 1em
+			@media (min-width 800px)
+				margin-right 0
 			.fly
 				font-size 6.8em
 				margin 0
 				line-height 1
+				@media (min-width 800px)
+					font-size 8.2em
 			.tothe
 				font-size 3.1em
 				margin 0
 				line-height 1
+				@media (min-width 800px)
+					font-size 3.6em
 			.limit
 				font-size 4em
 				margin 0 
 				line-height 1
+				@media (min-width 800px)
+					font-size 4.8em
 		div
 			display flex
 			flex-direction column
 			padding 0
+			@media (min-width 600px)
+				flex-direction row
 			img
 				margin 0.5em 0 0.5em 1em
 				max-width 100px
 				max-height 100px
+				@media (min-width 600px)
+					max-width 190px
+					max-height 190px
+					margin-top 1em
+				@media (min-width 800px)
+					max-width 240px
+					max-height 240px
+					margin-left 60px
 	.byline
 		margin 0 0 1em 1.1em
 		font-size 1.4em
 		font-family logo-font
 		color fttl-white
+		@media (min-width 450px)
+			margin 0 auto 1em auto
+		@media (min-width 600px)
+			margin 0 auto 0.5em auto
+			font-size 2.8em
+		@media (min-width 800px)
+			font-size 3.8em
 //Nav
 nav
 	margin 0
+	@media (min-width 800px)
+		.ng-hide:not(.ng-hide-animate)
+			display flex !important
 	#drop
 		display none
 	.toggle
@@ -77,22 +112,34 @@ nav
 		background fttl-red
 		color fttl-white
 		border-bottom 1px solid darken(fttl-red, 20%)
+		@media (min-width: 800px)
+			display none
 		span
 			display block
 			width 270px
 			padding 0.6em 0 0 1.1em
 			font-weight 700
 			font-size 1.4em
+			@media (min-width: 450px)
+				margin 0 auto
+				padding 0.6em 0 0 0
 	.menu
 		list-style none
 		padding 0
 		margin 0
+		@media (min-width 800px)
+			display flex
+			justify-content space-between
+			max-width 780px
+			margin 0 auto 0.5em auto
 		li
 			display block
 			max-width 100%
 			background fttl-red
 			height 45px
 			border-bottom 1px solid darken(fttl-red, 20%)
+			@media (min-width: 800px)
+				width 110px
 			.link, label
 				display block
 				max-width 100%
@@ -105,12 +152,21 @@ nav
 					padding 0.6em 0 0 1.1em
 					font-weight 700
 					font-size 1em
+					@media (min-width: 450px)
+						margin 0 auto
+						padding 0.6em 0 0 0
+					@media (min-width: 800px)
+						width 100%
+						text-align center
+						vertical-align middle
 			input
 				display none
 .bottom-border
 	height 16px
 	max-width 100%
-	background-color darken(fttl-red, 20%) 					
+	background-color darken(fttl-red, 20%) 		
+	@media (min-width: 800px)
+		display none			
 				
 // Views
 .main-title
@@ -120,6 +176,8 @@ nav
 	-ms-transform rotate(-4deg) 
 	-webkit-transform rotate(-4deg) 
 	transform rotate(-4deg)
+	@media (min-width 600px)
+		margin-bottom 2em
 .page-content	
 	margin 0 auto
 	color fttl-red
@@ -130,21 +188,39 @@ nav
 		background fttl-white
 		margin 0em auto 0.5em auto
 		box-shadow fttl-card
+		@media (min-width 600px)
+			max-width 550px
+		@media (min-width 600px)
+			max-width 780px
+		h4
+			margin 1em auto
+			width 270px
+			font-size 1.17em
 		p
 			color fttl-black
 			font-weight 500
-			font-size 0.85em
-		.link
-			padding-top 0.6em
-			text-align center
-			display block
-			position relative
-			max-width 270px
-			margin 0 auto 0.5em auto
-			height 45px
-			background fttl-red
-			color fttl-white
-			font-weight 700
+			font-size 0.85em	
+		ul
+			li
+				font-size 0.75em
+				margin-bottom 0.5em
+		
+		div
+			@media (min-width 600px)
+				display none
+			.link
+				padding-top 0.6em
+				text-align center
+				display block
+				position relative
+				max-width 270px
+				margin 0 auto 0.5em auto
+				height 45px
+				background fttl-red
+				color fttl-white
+				font-weight 700
+		
+				
 		
 		//Safety
 		.safety-link
@@ -152,9 +228,9 @@ nav
 				margin-bottom 1em	
 		//Contact
 		.angular-google-map-container
-				height 250px
-				width 100%
-				margin-bottom 10px
+			height 250px
+			width 100%
+			margin-bottom 10px
 		.contact-link
 			font-weight 700
 			font-size 0.9em
@@ -231,18 +307,37 @@ nav
 				color fttl-white
 				font-weight 700
 	//Flights
-	.item
-		padding 0
-		margin 0
-		position relative
-		
-		h3
-			color fttl-white
-			position absolute
-			padding 30px 0 0 25px
-		img
-			max-width 100%
-			margin-bottom 3px
+	div
+		@media (min-width 800px)
+			margin 0 auto
+			max-width 780px
+			display flex
+			flex-wrap wrap
+		.item
+			padding 0
+			margin 0
+			position relative
+			display block
+			@media (min-width 600px)
+				max-width 550px	
+				margin 0 auto
+			@media (min-width 800px)
+				max-width 550px	
+				margin 0 auto
+			h3
+				color fttl-white
+				position absolute
+				padding 30px 0 0 25px
+			img
+				max-width 100%
+				margin-bottom 3px
+				@media (min-width 600px)
+					max-width 550px	
+					margin 0 auto
+		.tease
+			@media (max-width 600px)
+				display none
+			
 			
 	//Crew
 	.gallery
@@ -259,7 +354,7 @@ nav
 			padding 10px 20px
 	//Info pages
 	.carousel
-		height 270px
+		height 12em
 		width 100%
 		li
 			img
@@ -271,6 +366,8 @@ footer
 	font-weight 700
 	font-size 0.65em
 	max-width 100%
+	@media (min-width 600px)
+		height 160px
 	.social-media
 		display flex
 		justify-content space-around
@@ -286,6 +383,10 @@ footer
 		margin 0
 		padding 1.5em 1em 1em 1em
 		height 45px
+		@media (min-width 600px)
+			font-size 1.5em
+			max-width 780px
+			margin 0 auto
 .btt
 	width 45px
 	height 45px
