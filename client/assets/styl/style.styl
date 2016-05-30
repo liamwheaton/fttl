@@ -1,9 +1,5 @@
 @import 'variables.styl'
 
-// General
-// [ng\\:cloak], [ng-cloak], .ng-cloak, .ng-hide 
-//   display none !important
-
 *
 	box-sizing border-box
 	text-decoration none
@@ -120,9 +116,11 @@ nav
 			padding 0.6em 0 0 1.1em
 			font-weight 700
 			font-size 1.4em
-			@media (min-width: 450px)
+			@media (min-width 450px)
 				margin 0 auto
 				padding 0.6em 0 0 0
+			@media (min-width 600px)
+				width 545px
 	.menu
 		list-style none
 		padding 0
@@ -155,6 +153,8 @@ nav
 					@media (min-width: 450px)
 						margin 0 auto
 						padding 0.6em 0 0 0
+					@media (min-width 600px)
+						width 545px
 					@media (min-width: 800px)
 						width 100%
 						text-align center
@@ -170,18 +170,30 @@ nav
 				
 // Views
 .main-title
+	width 305px
+	margin 0.5em 0 1em 0.5em
 	font-family heading-font
 	color fttl-red
 	font-size 2.1em
 	-ms-transform rotate(-4deg) 
 	-webkit-transform rotate(-4deg) 
 	transform rotate(-4deg)
+	@media (min-width 450px)
+		margin 1em auto
 	@media (min-width 600px)
-		margin-bottom 2em
+		font-size 3.5em
+		width 540px
+	@media (min-width 800px)
+		font-size 4.5em
+		width 780px
+		margin 0.8em auto
 .page-content	
 	margin 0 auto
 	color fttl-red
 	//Hangar
+	.mob-link
+		@media (min-width 600px)
+			display none
 	section
 		max-width 100%
 		padding 10px 20px
@@ -190,6 +202,7 @@ nav
 		box-shadow fttl-card
 		@media (min-width 600px)
 			max-width 550px
+			padding 10px 50px
 		@media (min-width 600px)
 			max-width 780px
 		h4
@@ -205,23 +218,17 @@ nav
 				font-size 0.75em
 				margin-bottom 0.5em
 		
-		div
-			@media (min-width 600px)
-				display none
-			.link
-				padding-top 0.6em
-				text-align center
-				display block
-				position relative
-				max-width 270px
-				margin 0 auto 0.5em auto
-				height 45px
-				background fttl-red
-				color fttl-white
-				font-weight 700
-		
-				
-		
+		.link
+			padding-top 0.6em
+			text-align center
+			display block
+			position relative
+			max-width 270px
+			margin 0 auto 0.5em auto
+			height 45px
+			background fttl-red
+			color fttl-white
+			font-weight 700
 		//Safety
 		.safety-link
 			img
@@ -257,8 +264,6 @@ nav
 					margin-left 5px
 				.fa-book
 					font-size 2.5em
-	
-			
 		.map-links
 			display flex
 			flex-direction column
@@ -274,6 +279,7 @@ nav
 				background fttl-red
 				color fttl-white
 				font-weight 700
+				cursor pointer
 		form
 			margin 0 auto
 			width 270px
@@ -307,51 +313,54 @@ nav
 				color fttl-white
 				font-weight 700
 	//Flights
-	div
+	.masonry
 		@media (min-width 800px)
 			margin 0 auto
 			max-width 780px
-			display flex
-			flex-wrap wrap
+			column-count 2
+			column-gap 0
+			line-height 0
 		.item
 			padding 0
 			margin 0
 			position relative
 			display block
 			@media (min-width 600px)
-				max-width 550px	
+				width 100%	
 				margin 0 auto
 			@media (min-width 800px)
-				max-width 550px	
-				margin 0 auto
+				display inline-block
+				width 100%
 			h3
 				color fttl-white
+				font-family logo-font
+				font-size 2.5em
 				position absolute
-				padding 30px 0 0 25px
+				padding 30px 0 0 50px
 			img
 				max-width 100%
-				margin-bottom 3px
-				@media (min-width 600px)
-					max-width 550px	
-					margin 0 auto
 		.tease
 			@media (max-width 600px)
-				display none
-			
-			
+				display none	
 	//Crew
 	.gallery
 		padding 0
 		h3
 			background darken(fttl-red, 20%)
+			font-family logo-font
 			color fttl-white
 			margin 0
-			padding 20px 0 20px 10px	
+			padding 20px 0 20px 20px
+			@media (min-width 600px)
+				font-size 2em
+				padding-left 50px	
 		img
 			max-width 100%
 		p
 			margin 0
 			padding 10px 20px
+			@media (min-width 600px)
+				padding-left 50px
 	//Info pages
 	.carousel
 		height 12em
