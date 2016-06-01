@@ -99,6 +99,7 @@ nav
 	@media (min-width 800px)
 		.ng-hide:not(.ng-hide-animate)
 			display flex !important
+			
 	#drop
 		display none
 	.toggle
@@ -138,12 +139,16 @@ nav
 			border-bottom 1px solid darken(fttl-red, 20%)
 			@media (min-width: 800px)
 				width 110px
+				&:hover
+					z-index 9999
+					transform scale(1.005)
 			.link, label
 				display block
 				max-width 100%
 				color fttl-white
 				font-weight 700
 				font-size 1.2em
+				height 45px
 				span
 					display block
 					width 270px
@@ -159,6 +164,9 @@ nav
 						width 100%
 						text-align center
 						vertical-align middle
+			.active
+				background darken(fttl-red, 20%)
+				cursor default
 			input
 				display none
 .bottom-border
@@ -280,6 +288,8 @@ nav
 				color fttl-white
 				font-weight 700
 				cursor pointer
+				
+				
 		form
 			margin 0 auto
 			width 270px
@@ -312,6 +322,9 @@ nav
 				background fttl-red
 				color fttl-white
 				font-weight 700
+				&:hover
+					z-index 9999
+					transform scale(1.005)
 	//Flights
 	.masonry
 		@media (min-width 800px)
@@ -325,6 +338,15 @@ nav
 			margin 0
 			position relative
 			display block
+			transition-duration: 0.3s
+			font-smoothing grayscale
+			transition-property transform
+			backface-visibility hidden
+			box-shadow 0 0 1px rgba(0, 0, 0, 0)
+			transform translateZ(0)
+			&:hover
+				z-index 9999
+				transform scale(1.005)
 			@media (min-width 600px)
 				width 100%	
 				margin 0 auto
@@ -365,6 +387,10 @@ nav
 	.carousel
 		height 12em
 		width 100%
+		margin 0
+		@media (min-width 800px)
+			max-width 780px
+			margin 0 auto
 		li
 			img
 				max-width 100%
@@ -402,7 +428,7 @@ footer
 	padding-top 13px
 	background rgba(153, 26, 62, 0.3)
 	color fttl-white
-	z-index 999
+	z-index 999999
 	position fixed
 	right 0px
 	bottom 0px

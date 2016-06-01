@@ -2,12 +2,24 @@
 	<label class="toggle" for="drop"><span>Menu</span></label>
 	<input type="checkbox" id="drop" ng-model="checked" aria-label="drop ng-hide">
 	<ul class="menu" ng-show="checked">
-		<li><a class ="link" href="#/hangar"><span>Hangar</span></a></li>
-		<li><a class ="link" href="#/crew"><span>Crew</span></a></li>
-		<li><a class ="link" href="#/flights"><span>Flights</span></a></li>
-		<li><a class ="link" href="#/aircraft"><span>Aircraft</span></a></li>
-		<li><a class ="link" href="#/safety"><span>Safety</span></a></li>
-		<li><a class ="link" href="#/contact"><span>Contact</span></a></li>
+		<li>
+			<a ng-class="{active: activetab==='/'}" class ="link" href="#/hangar"><span>Hangar</span></a>
+		</li>
+		<li>
+			<a ng-class="{'active': $root.activetab==='/crew'}" class ="link" href="#/crew"><span>Crew</span></a>
+		</li>
+		<li>
+			<a ng-class="{'active': $root.activetab==='/flights'}" class ="link" href="#/flights"><span>Flights</span></a>
+		</li>
+		<li>
+			<a ng-class="{'active': $root.activetab==='/aircraft'}" class ="link" href="#/aircraft"><span>Aircraft</span></a>
+		</li>
+		<li>
+			<a ng-class="{'active': $root.activetab==='/safety'}" class ="link" href="#/safety"><span>Safety</span></a>
+		</li>
+		<li>
+			<a ng-class="{'active': $root.activetab==='/contact'}" class ="link" href="#/contact"><span>Contact</span></a>
+		</li>
 	</ul>
 </nav>
 <div class="bottom-border"></div>
